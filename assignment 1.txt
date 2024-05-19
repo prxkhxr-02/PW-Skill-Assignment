@@ -1,0 +1,101 @@
+Ans:1. 
+1.For loop:
+   - Use a for loop when you know the number of iterations beforehand or when you want to iterate over a sequence like a list, tuple, or string.
+ 
+   Example using a for loop to iterate over a list:
+   numbers = [1, 2, 3, 4, 5]
+   for num in numbers:
+       print(num)
+   
+
+2. While loop:
+   - Use a while loop when you don't know the number of iterations beforehand or when you want to iterate until a certain condition is met.
+
+   Example using a while loop to iterate until a condition is met
+   num = 0
+   while num < 5:
+       print(num)
+       num += 1
+   
+Ans:2S
+
+1.Using for loop:
+
+sum_result = 0
+product_result = 1
+
+for i in range(1, 11):
+    sum_result += i
+    product_result *= i
+
+print("Using for loop:")
+print("Sum of the first 10 natural numbers:", sum_result)
+print("Product of the first 10 natural numbers:", product_result)
+
+
+2.Using while loop:
+
+sum_result = 0
+product_result = 1
+num = 1
+
+while num <= 10:
+    sum_result += num
+    product_result *= num
+    num += 1
+
+print("Using while loop:")
+
+Ans:3
+def calculate_electricity_bill(units):
+    total_bill = 0
+    
+    if units <= 100:
+        total_bill = units * 4.5
+    elif units <= 200:
+        total_bill = 100 * 4.5 + (units - 100) * 6
+    elif units <= 300:
+        total_bill = 100 * 4.5 + 100 * 6 + (units - 200) * 10
+    else:
+        total_bill = 100 * 4.5 + 100 * 6 + 100 * 10 + (units - 300) * 20
+    
+    return total_bill
+
+units_consumed = int(input("Enter the units of electricity consumed in a month: "))
+
+electricity_bill = calculate_electricity_bill(units_consumed)
+
+print("Total electricity bill: Rs.", electricity_bill)
+
+Ans:4 
+
+1.Using for loop:
+
+cubes_divisible_by_4_or_5 = []
+
+for num in range(1, 101):
+    cube = num ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        cubes_divisible_by_4_or_5.append(num)
+
+print("Using for loop:", cubes_divisible_by_4_or_5)
+
+
+Using while loop:
+
+cubes_divisible_by_4_or_5 = []
+num = 1
+
+while num <= 100:
+    cube = num ** 3
+    if cube % 4 == 0 or cube % 5 == 0:
+        cubes_divisible_by_4_or_5.append(num)
+    num += 1
+
+print("Using while loop:", cubes_divisible_by_4_or_5)
+
+Ans:5 
+string = "I want to become a data scientist"
+vowels = "aeiouAEIOU"
+vowel_count = sum(1 for char in string if char in vowels)
+print("Number of vowels in the string:", vowel_count)
